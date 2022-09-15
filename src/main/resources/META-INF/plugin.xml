@@ -1,0 +1,32 @@
+<idea-plugin>
+    <id>com.rick.ormplugin.guide-idea-plugin-orm</id>
+    <name>ORM</name>
+    <vendor email="ty861506831@gmail.com" url="https://github.com/TuYv">Rick</vendor>
+
+    <description><![CDATA[
+      Automatically generate CRUD code, Improve development efficiency<br>
+      <em>1. Right-click the project and select SimpleGenerate</em><br>
+      <em>2. Entering the database account password</em><br>
+      <em>3. Select the table to be generated</em><br>
+      <em>4. Check OK to complete generate</em>
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+        <projectService serviceImplementation="com.rick.ormplugin.infrastructure.data.DataSetting"/>
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="CodeGenerateAction" class="com.rick.ormplugin.action.CodeGenerateAction"
+                text="SimpleGenerate" description="Code Generate ORM" icon="/icons/logo.png">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="last"/>
+            <keyboard-shortcut first-keystroke="ctrl shift G" keymap="$default" />
+        </action>
+
+    </actions>
+</idea-plugin>
