@@ -57,6 +57,13 @@ public interface ${simpleName} {
      * @param id ID
      */
     void deleteById(${field.typeSimpleName} id);
+
+    /**
+     * 批量新增
+     *
+     * @param records
+     */
+    void batchInsert(List<${model.simpleName}> records);
     </#if>
 </#list>
 

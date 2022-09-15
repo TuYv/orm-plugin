@@ -82,4 +82,14 @@
         WHERE <#list model.fields as field><#if field.id>${field.columnName}</#if></#list>=<#noparse>#{id}</#noparse>
     </delete>
 
+    <!--批量新增-->
+    <insert id="batchInsert" keyColumn="id" keyProperty="id" parameterType="map" useGeneratedKeys="true">
+        INSERT INTO ${model.tableName}
+        (<#list model.fields as field><#if field_index!=0>,</#if>${field.columnName}</#list>)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (<#list model.fields as field><#if field_index!=0>,</#if><#noparse>#{item.</#noparse>${field.name}}</#list>)
+        </foreach>
+    </insert>
+
 </mapper>
