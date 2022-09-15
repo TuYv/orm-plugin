@@ -3,6 +3,8 @@
     <name>ORM</name>
     <vendor email="ty861506831@gmail.com" url="https://github.com/TuYv">Rick</vendor>
 
+    <idea-version since-build="222.*"/>
+
     <description><![CDATA[
       Automatically generate CRUD code, Improve development efficiency<br>
       <em>1. Right-click the project and select SimpleGenerate</em><br>
@@ -19,7 +21,6 @@
         <!-- Add your extensions here -->
         <projectService serviceImplementation="com.rick.ormplugin.infrastructure.data.DataSetting"/>
     </extensions>
-
     <actions>
         <!-- Add your actions here -->
         <action id="CodeGenerateAction" class="com.rick.ormplugin.action.CodeGenerateAction"

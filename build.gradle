@@ -20,6 +20,11 @@ intellij {
     version ='2022.2.2'
     updateSinceUntilBuild=false
 }
+patchPluginXml {
+    changeNotes = """
+        add batchUpdate function<br>
+        compatible with more versions"""
+}
 
 dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
