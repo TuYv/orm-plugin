@@ -3,7 +3,7 @@
     <name>ORM</name>
     <vendor email="ty861506831@gmail.com" url="https://github.com/TuYv">Rick</vendor>
 
-    <idea-version since-build="222.*"/>
+    <idea-version since-build="202.*"/>
 
     <description><![CDATA[
       Automatically generate CRUD code, Improve development efficiency<br>
