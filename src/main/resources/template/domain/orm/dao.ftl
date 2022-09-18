@@ -1,6 +1,7 @@
 package ${package};
 
 import org.apache.ibatis.annotations.Mapper;
+import java.util.List;
 <#list imports as import>
 import ${import};
 </#list>

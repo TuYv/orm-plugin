@@ -25,7 +25,7 @@ public class ${simpleName} {
         * @param id ID
         * @return {@link ${dao.model.simpleName}}
         */
-        ${dao.model.simpleName} findById(${field.typeSimpleName} id) {
+        public ${dao.model.simpleName} findById(${field.typeSimpleName} id) {
             return ${dao.varName}.findById(id);
         }
 
@@ -34,7 +34,7 @@ public class ${simpleName} {
         *
         * @param ${dao.model.varName} ${dao.model.comment}
         */
-        void insert(${dao.model.simpleName} ${dao.model.varName}) {
+        public void insert(${dao.model.simpleName} ${dao.model.varName}) {
         ${dao.varName}.insertSelective(${dao.model.varName});
         }
 
@@ -43,7 +43,7 @@ public class ${simpleName} {
         *
         * @param ${dao.model.varName} ${dao.model.comment}
         */
-        void update(${dao.model.simpleName} ${dao.model.varName}) {
+        public void update(${dao.model.simpleName} ${dao.model.varName}) {
             ${dao.varName}.updateSelective(${dao.model.varName});
         }
 
@@ -52,7 +52,7 @@ public class ${simpleName} {
         *
         * @param id ID
         */
-        void deleteById(${field.typeSimpleName} id){
+        public void deleteById(${field.typeSimpleName} id){
             ${dao.varName}.deleteById(id);
         }
     </#if>

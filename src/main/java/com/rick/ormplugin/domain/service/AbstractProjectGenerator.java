@@ -35,25 +35,19 @@ public abstract class AbstractProjectGenerator extends GeneratorConfig implement
 
     public void writeFile(Project project, String packageName, String name, String ftl, Object dataModel) {
         if (isNeedReWrite(project, packageName, name)) {
-            VirtualFile virtualFile = null;
-            try {
-                VirtualFileManager.getInstance().syncRefresh();
-                virtualFile = createPackageDir(packageName).createChildData(project, name);
-                StringWriter stringWriter = new StringWriter();
-                Template template = super.getTemplate(ftl);
-                template.process(dataModel, stringWriter);
-                Application applicationManager = ApplicationManager.getApplication();
-                VirtualFile finalVirtualFile = virtualFile;
-                applicationManager.runWriteAction(() -> {
-                    try {
-                        finalVirtualFile.setBinaryContent(stringWriter.toString().getBytes(StandardCharsets.UTF_8));
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                });
-            } catch (IOException | TemplateException e) {
-                e.printStackTrace();
-            }
+            Application applicationManager = ApplicationManager.getApplication();
+            applicationManager.runWriteAction(() -> {
+                try {
+                    VirtualFileManager.getInstance().syncRefresh();
+                    VirtualFile virtualFile = createPackageDir(packageName).createChildData(project, name);
+                    StringWriter stringWriter = new StringWriter();
+                    Template template = super.getTemplate(ftl);
+                    template.process(dataModel, stringWriter);
+                    virtualFile.setBinaryContent(stringWriter.toString().getBytes(StandardCharsets.UTF_8));
+                } catch (IOException | TemplateException e) {
+                    throw new RuntimeException(e);
+                }
+            });
         }
     }
 

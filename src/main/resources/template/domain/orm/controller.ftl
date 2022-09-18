@@ -27,7 +27,7 @@ public class ${simpleName} {
         * @return {@link ${model.simpleName}}
         */
         @RequestMapping(value = "/get", method = RequestMethod.GET)
-        ${model.simpleName} findById(@RequestParam("id") ${field.typeSimpleName} id) {
+        public ${model.simpleName} findById(@RequestParam("id") ${field.typeSimpleName} id) {
             return ${service.varName}.findById(id);
         }
 
@@ -37,8 +37,8 @@ public class ${simpleName} {
         * @param ${model.varName} ${model.comment}
         */
         @RequestMapping(value = "/insert", method = RequestMethod.POST)
-        void insert(@RequestBody ${model.simpleName} ${model.varName}) {
-        ${service.varName}.insert(${model.varName});
+        public void insert(@RequestBody ${model.simpleName} ${model.varName}) {
+            ${service.varName}.insert(${model.varName});
         }
 
         /**
@@ -47,7 +47,7 @@ public class ${simpleName} {
         * @param ${model.varName} ${model.comment}
         */
         @RequestMapping(value = "/update", method = RequestMethod.POST)
-        void update(@RequestBody ${model.simpleName} ${model.varName}) {
+        public void update(@RequestBody ${model.simpleName} ${model.varName}) {
             ${service.varName}.update(${model.varName});
         }
 
@@ -57,7 +57,7 @@ public class ${simpleName} {
         * @param id ID
         */
         @RequestMapping(value = "/update", method = RequestMethod.GET)
-        void deleteById(@RequestParam("id") ${field.typeSimpleName} id){
+        public void deleteById(@RequestParam("id") ${field.typeSimpleName} id){
             ${service.varName}.deleteById(id);
         }
     </#if>

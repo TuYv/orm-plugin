@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.rick'
-version = '0.0.2-SNAPSHOT'
+version = '0.0.4-SNAPSHOT'
 sourceCompatibility = '11'
 
 configurations {
@@ -22,8 +22,9 @@ intellij {
 }
 patchPluginXml {
     changeNotes = """
-        add batchUpdate function<br>
-        compatible with more versions"""
+        . add batchUpdate function<br>
+        . compatible with more versions<br>
+        . fixed several notable bugs"""
 }
 
 dependencies {
