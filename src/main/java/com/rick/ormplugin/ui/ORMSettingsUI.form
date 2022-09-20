@@ -158,8 +158,8 @@
               <grid row="11" column="2" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <label value="测试连接"/>
-              <text value="测试连接"/>
+              <label value="Test"/>
+              <text value="Test"/>
             </properties>
           </component>
           <component id="6d3e0" class="javax.swing.JButton" binding="selectButton">
@@ -167,8 +167,8 @@
               <grid row="11" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <label value="查询表名"/>
-              <text value="查询表名"/>
+              <label value="Get Table"/>
+              <text value="Get Table"/>
             </properties>
           </component>
           <component id="c95d6" class="javax.swing.JLabel">
@@ -245,7 +245,7 @@
               <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="数据库"/>
+              <text value="database"/>
             </properties>
           </component>
           <component id="543d7" class="javax.swing.JLabel">
@@ -253,7 +253,7 @@
               <grid row="9" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="用户名"/>
+              <text value="user"/>
             </properties>
           </component>
           <component id="44a67" class="javax.swing.JLabel">
@@ -261,7 +261,7 @@
               <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="密码"/>
+              <text value="password"/>
             </properties>
           </component>
           <component id="da34a" class="javax.swing.JLabel">
@@ -269,7 +269,7 @@
               <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="项目名"/>
+              <text value="projectName"/>
             </properties>
           </component>
           <component id="4ac7f" class="javax.swing.JLabel">
@@ -314,7 +314,7 @@
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="类路径"/>
+              <text value="classPath"/>
             </properties>
           </component>
         </children>

@@ -20,7 +20,7 @@ public class ReWriteDialog extends DialogWrapper {
 
     public ReWriteDialog(@Nullable Project project) {
         super(project);
-        setTitle("文件已存在");
+        setTitle("file already exists");
         init();
     }
 
@@ -28,7 +28,7 @@ public class ReWriteDialog extends DialogWrapper {
     protected @Nullable JComponent createCenterPanel() {
         JPanel dialogPanel = new JPanel(new BorderLayout());
 
-        JLabel label = new JLabel("文件" + Config.reWriteFile + "已存在，是否覆盖？");
+        JLabel label = new JLabel("File: " + Config.reWriteFile + "already exists，is covered？");
         label.setPreferredSize(new Dimension(100, 100));
         dialogPanel.add(label, BorderLayout.CENTER);
 
