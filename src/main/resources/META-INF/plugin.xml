@@ -7,8 +7,8 @@
 
     <description><![CDATA[
       <a href="https://github.com/TuYv/orm-plugin">github</a> | <a href="https://github.com/TuYv/orm-plugin/issues">issues</a><br><br>
-      Automatically generate CRUD code, Improve development efficiency<br>
-      自动生成CRUD代码，提高开发效率<br>
+      Based on mybatis automatically generate database ORM code, Improve development efficiency<br>
+      基于Mybatis自动生成数据库ORM代码，提高开发效率<br>
       <br>
       This is an early version,if you have any comments about this product, submit your <a href="https://github.com/TuYv/orm-plugin/issues">issue</a> and i'll fix it ASAP<br>
       这是一个早期版本,如果有任何意见,提交<a href="https://github.com/TuYv/orm-plugin/issues">Issue</a>,我会尽快修复,谢谢理解.<br>
