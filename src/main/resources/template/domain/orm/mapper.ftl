@@ -92,4 +92,26 @@
         </foreach>
     </insert>
 
+    <!--批量更新-->
+    <update id="batchUpdate" parameterType="list">
+        UPDATE ${model.tableName}
+        <trim prefix="set" suffixOverrides=",">
+            <#list model.fields as field>
+                <#if !field.id>
+                    <trim prefix="${field.columnName}=case" suffix="end,">
+                        <foreach collection="list" item="item" index="index">
+                            <if test="item.${field.name} != null">
+                                when id=<#noparse>#{item.id} then #{</#noparse>item.${field.name}}
+                            </if>
+                        </foreach>
+                    </trim>
+                </#if>
+            </#list>
+        </trim>
+        where
+        <foreach collection="list" separator="or" item="item" index="index" >
+            id=<#noparse>#{item.id}</#noparse>
+        </foreach>
+    </update>
+
 </mapper>

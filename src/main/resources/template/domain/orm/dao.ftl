@@ -65,6 +65,13 @@ public interface ${simpleName} {
      * @param records
      */
     void batchInsert(List<${model.simpleName}> records);
+
+    /**
+     * 批量更新
+     *
+     * @param records
+     */
+    void batchUpdate(List<${model.simpleName}> records);
     </#if>
 </#list>
 
